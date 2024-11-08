@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Search</title>
+</head>
+<body>
+    <input type="text" id="searchInput" placeholder="Search...">
+    <button onclick="performSearch()">Search</button>
+
+    <script>
+        // Function to perform the search
+        function performSearch() {
+            const query = document.getElementById('searchInput').value;
+            console.log('Search query:', query);
+            // Add your search logic here
+        }
+
+        // Add event listener for the Enter key
+        document.getElementById('searchInput').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                performSearch();
+                console.log('searched')
+            }
+        });
+    </script>
+</body>
+</html>
